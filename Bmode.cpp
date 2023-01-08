@@ -27,7 +27,7 @@ int main()
 
     // Read data from files into dataBuffer objects
     dataBuffer *dataHead = new dataBuffer(imagFile, realFile, parameters->getNumElement(), parameters->getNumSample(), 0); // Create head node
-    dataHead->next = NULL;                                                                                                 // Initialize head node "next" attibute
+    dataHead->next = NULL;                                                                                                 // Initialize head node "next" attribute
     dataBuffer *currentData = dataHead;                                                                                    // Initialize current data pointer
     for (int i = 1; i < parameters->getNumScanline(); i++)
     {
