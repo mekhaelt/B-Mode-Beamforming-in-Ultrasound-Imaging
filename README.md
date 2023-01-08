@@ -22,3 +22,7 @@ The first case tests if the linked list pointer is initialized properly, the sec
 Compile imageParam.cpp with testImageParam.cpp (g++ imageParam.cpp testImageParam.cpp -o test2)  
 
 Use 0.05 as the desired imaging depth and 256 as the number of pixels. The first case tests if the parameters have been initialized properly and have the correct access functions, the second case tests if the element positions have been derived correctly, and the third case tests if the pixel positions of different scanlines are derived correctly. The program will exit if any case fails.  
+
+## Authors
+Mekhael Thaha  
+Billy Yui
