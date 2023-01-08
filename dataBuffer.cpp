@@ -19,10 +19,11 @@ dataBuffer::dataBuffer(std::ifstream *imagFile, std::ifstream *realFile, int inp
     scanline = inputScanline;
     dataMatrix = createDataMatrix();            // call creatDataMatrix which will dynamically allocate a 2D complex array and assign the return value to dataMatrix
     if (loadRFData(dataMatrix, imagFile, realFile))
-    {
-        // loadRFData return non-zero value, error occured
-        cout << "Error"<< endl;
-    }
+        {
+            // if loadRFData return non-zero value an error occured
+            cout << "Error"<< endl;
+        }
+    
 }
 
 dataBuffer::~dataBuffer()
@@ -57,7 +58,6 @@ int dataBuffer::loadRFData(complex **RFData, std::ifstream *imagFile, std::ifstr
             RFData[i][j].imag = atof(line);
         }
     }
-
     return 0;
 }
 
