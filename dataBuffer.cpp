@@ -18,7 +18,11 @@ dataBuffer::dataBuffer(std::ifstream *imagFile, std::ifstream *realFile, int inp
     numSample = inputNumSample;
     scanline = inputScanline;
     dataMatrix = createDataMatrix();            // call creatDataMatrix which will dynamically allocate a 2D complex array and assign the return value to dataMatrix
-    loadRFData(dataMatrix, imagFile, realFile); // call loadRFData will populate dataMatrix
+    if (loadRFData(dataMatrix, imagFile, realFile))
+    {
+        // loadRFData return non-zero value, error occured
+        cout << "Error"<< endl;
+    }
 }
 
 dataBuffer::~dataBuffer()
