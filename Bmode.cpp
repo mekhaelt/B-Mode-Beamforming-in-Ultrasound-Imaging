@@ -17,8 +17,8 @@ int main()
     // Create ifstream objects to keep track of line position
     ifstream *imagFile = new ifstream;
     ifstream *realFile = new ifstream;
-    imagFile->open("A4ImagRFData.txt"); // Replace the file name to A4ImagRFData_Mystery for last part
-    realFile->open("A4RealRFData.txt"); // Replace the file name to A4RealRFData_Mystery for last part
+    imagFile->open("A4ImagRFData.txt"); 
+    realFile->open("A4RealRFData.txt"); 
     if (imagFile->fail() || realFile->fail())
     {
         cerr << "Cannot load from file, exiting program" << std::endl;
